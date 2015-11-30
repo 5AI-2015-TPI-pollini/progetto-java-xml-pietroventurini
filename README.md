@@ -3,7 +3,7 @@
 
 This is a project assigned in November 2015 at IIS Castelli (5AI). It's a program that retrieve info about places and their respective weather from two web services.
 
-<h3>Functioning ▼</h3
+<h3>Functioning ▼</h3>
 
 Geocode Project works using APIs from Google Maps and OpenWeather for retrieving data in XML.
 
