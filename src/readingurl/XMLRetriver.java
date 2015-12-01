@@ -21,10 +21,10 @@ public class XMLRetriver {
 
     public Document retriveResult() {
                 try {
-                    //URLConnection urlConnection = url.openConnection();
+                    URLConnection urlConnection = url.openConnection();
                     // Open the http connection
-                    Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
-                    URLConnection urlConnection = url.openConnection(proxy); 
+                    //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
+                    //URLConnection urlConnection = url.openConnection(proxy); 
                     // Parse the xml
                     doc = docBuilderFactory.newDocumentBuilder().parse(urlConnection.getInputStream());  
                     

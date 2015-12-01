@@ -32,6 +32,15 @@ public class Location {
         return new Point.Double(lat, lng);
     }
     
+    public String getLatitude() {
+        return String.valueOf(lat);
+    }
+    
+    public String getLongitude() {
+        return String.valueOf(lng);
+    }    
+    
+    
     public void setCoordinates(Point.Double coordinates) {
         lat = coordinates.getX();
         lng = coordinates.getY();

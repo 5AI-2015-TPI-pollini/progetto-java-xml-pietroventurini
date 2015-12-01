@@ -8,11 +8,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readingurl.AppController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readingurl.AppController">
    <children>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0">
          <top>
-            <VBox prefHeight="23.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="23.0" prefWidth="850.0" BorderPane.alignment="CENTER">
                <children>
                   <MenuBar>
                     <menus>
@@ -43,13 +43,13 @@
                   <Button fx:id="myButton" layoutX="315.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonEvent" prefHeight="25.0" prefWidth="91.0" text="Search" />
                   <TableView fx:id="myTable" depthTest="ENABLE" layoutX="14.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="571.0">
                       <columns>
-                      <TableColumn editable="false" prefWidth="82.0" text="LOCATION" />
-                      <TableColumn editable="false" prefWidth="77.0" text="LATITUDE" />
-                        <TableColumn editable="false" prefWidth="78.0" text="LONGITUDE" />
-                        <TableColumn editable="false" prefWidth="123.0" text="TEMPERATURE" />
-                        <TableColumn editable="false" prefWidth="47.0" text="MIN" />
-                        <TableColumn editable="false" prefWidth="44.0" text="MAX" />
-                        <TableColumn editable="false" prefWidth="119.0" text="CLOUDS" />
+                      <TableColumn fx:id="locationColumn" editable="true" prefWidth="82.0" text="LOCATION" />
+                      <TableColumn fx:id="latitudeColumn" editable="true" prefWidth="77.0" text="LATITUDE" />
+                        <TableColumn fx:id="longitudeColumn" editable="true" prefWidth="78.0" text="LONGITUDE" />
+                        <TableColumn fx:id="temperatureColumn" editable="true" prefWidth="123.0" text="TEMPERATURE" />
+                        <TableColumn fx:id="minColumn" editable="true" prefWidth="47.0" text="MIN" />
+                        <TableColumn fx:id="maxColumn" editable="true" prefWidth="44.0" text="MAX" />
+                        <TableColumn fx:id="cloudsColumn" editable="true" prefWidth="119.0" text="CLOUDS" />
                     </columns>                     
                   </TableView>
                </children>

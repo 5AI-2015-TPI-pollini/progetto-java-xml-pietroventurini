@@ -18,16 +18,16 @@ public class Forecast {
         return name;
     }
 
-    public double getTemperature() {
-        return temperature;
+    public String getTemperature() {
+        return String.format("%.1f", temperature) + "°C";
     }
 
-    public double getMin() {
-        return min;
+    public String getMin() {
+        return String.format("%.1f", min) + "°C";
     }
 
-    public double getMax() {
-        return max;
+    public String getMax() {
+        return String.format("%.1f", max) + "°C";
     }
 
     public String getClouds() {
