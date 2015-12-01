@@ -34,7 +34,9 @@ public class AppController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
+        
         // Initialize the table
+            myTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
             locationColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Location, String>, ObservableValue<String>>() {
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Location, String> p) {
                 return new SimpleStringProperty(p.getValue().getName());
