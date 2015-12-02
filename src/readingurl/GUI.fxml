@@ -7,6 +7,7 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<!-- GUI Definition -->
 
 <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readingurl.AppController">
    <children>
@@ -18,13 +19,14 @@
                     <menus>
                       <Menu mnemonicParsing="false" text="Menu">
                         <items>
+                          <MenuItem fx:id="preferencesMenu" mnemonicParsing="false" onAction="#preferencesMenuEvent" text="Preferences" />
                           <MenuItem fx:id="myClose" mnemonicParsing="false" onAction="#closeEvent" text="Close" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
-                        <items>
-                          <MenuItem mnemonicParsing="false" text="Arrangiati (:" />
-                        </items>
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Arrangiati :)" />
+                           </items>
                       </Menu>
                     </menus>
                   </MenuBar>

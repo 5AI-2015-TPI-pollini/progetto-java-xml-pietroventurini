@@ -2,7 +2,7 @@ package Weather;
 
 public class Forecast {
     
-    private String name;
+    private final String name;
     private double temperature, min, max;
     private String clouds;
 

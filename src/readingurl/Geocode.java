@@ -19,46 +19,14 @@ import javafx.stage.Stage;
 public class Geocode extends Application {
 
     /**
-     *
-     * @param args
+     * The Geocode class initializes the GUI
+     * 
+     * @author Pietro Venturini
+     * @version 1.0 
      */
+    
     public static void main(String[] args) {
-
-        try {
-            
             launch(args);
-            
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Choose a location: ");
-            String location;
-            
-            location = br.readLine();
-            
-            
-            XMLRetriver object = new XMLRetriver(GMapsURLHandler.generateURL(location));
-            GMapsXPathHandler XPH = new GMapsXPathHandler(object.retriveResult());
-            Location locations[] = XPH.extractFromDoc();
-            System.out.println("Searched: "+ location);
-            for (int i = 0; i < locations.length; i++)
-            {
-                System.out.println(i+1 + ")\n" + locations[i]);
-            }
-            
-            Scanner in = new Scanner(System.in);
-            int location_id;
-            do {
-                System.out.println("Choose the location: ");
-                location_id = in.nextInt() -1 ;
-            } while (0 > location_id || location_id >= locations.length);
-            
-            
-            XMLRetriver object2 = new XMLRetriver(WeatherURLHandler.generateURL(locations[location_id]));
-            WeatherXPathHandler WXPH = new WeatherXPathHandler(object2.retriveResult());
-            locations[location_id].setForecast(WXPH.extractFromDoc());
-            System.out.println(locations[location_id].getForecast());
-        } catch (IOException ex) {
-            Logger.getLogger(Geocode.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     @Override
@@ -67,6 +35,7 @@ public class Geocode extends Application {
         primaryStage.setTitle("GEOCODING");
         primaryStage.setScene(new Scene(root, 850, 500));
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e -> System.exit(0)); //Closing the program when 'X' is pressed
     }
 
 }

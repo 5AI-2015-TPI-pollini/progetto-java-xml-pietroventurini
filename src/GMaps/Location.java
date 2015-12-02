@@ -3,6 +3,13 @@ package GMaps;
 import Weather.Forecast;
 import java.awt.Point;
 
+/**
+ * This is the Location Class,
+ * every location has a name, Coordinates, and Forecast
+ * 
+ * @author Pietro Venturini
+ */
+
 public class Location {
 
 

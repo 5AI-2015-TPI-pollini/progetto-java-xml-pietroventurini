@@ -8,6 +8,13 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+/**
+ * This class is used to analyze the Document received from
+ * Geocode (GMaps APIs) using XPath queries.
+ * 
+ * @author Pietro Venturini
+ */
+
 public class GMapsXPathHandler {
         
     private Document xml;
@@ -42,6 +49,7 @@ public class GMapsXPathHandler {
         } catch (XPathExpressionException ex) {
             System.out.println("extractFromDoc has reported an error");
         }
+        
         return locations;
     }
 }

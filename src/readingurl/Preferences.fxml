@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<!-- Preferences Definition -->
+
+<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readingurl.PreferencesController">
+   <children>
+      <CheckBox fx:id="proxyCheckbox" layoutX="58.0" layoutY="110.0" mnemonicParsing="false" onAction="#proxyCheckboxEvent" prefHeight="31.0" prefWidth="95.0" text="Proxy" textFill="#616161">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="69.0" layoutY="14.0" text="PREFERENCES">
+         <font>
+            <Font name="Arial Black" size="39.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addressField" layoutX="58.0" layoutY="187.0" />
+      <TextField fx:id="portField" layoutX="228.0" layoutY="187.0" />
+      <Label layoutX="58.0" layoutY="160.0" prefHeight="17.0" prefWidth="123.0" text="Address" textFill="#616161">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="160.0" text="Port" textFill="#616161">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="197.0" layoutY="237.0" mnemonicParsing="false" onAction="#cancelButtonEvent" prefHeight="31.0" prefWidth="95.0" text="Cancel" textFill="#616161">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="applyButton" layoutX="303.0" layoutY="237.0" mnemonicParsing="false" onAction="#applyButtonEvent" prefHeight="31.0" prefWidth="95.0" text="Apply" textFill="#616161">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
