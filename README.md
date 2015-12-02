@@ -9,4 +9,4 @@ Geocode Project works using APIs from Google Maps and OpenWeather for retrieving
 
 <h3>Wiki ▼</h3>
 
-User's guide:
+User's guide: https://github.com/5AI-2015-TPI-pollini/progetto-java-xml-pietroventurini/wiki/Geocode
