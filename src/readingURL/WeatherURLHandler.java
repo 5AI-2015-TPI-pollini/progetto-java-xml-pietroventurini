@@ -1,12 +1,11 @@
-package readingurl;
+package readingURL;
 
 import GMaps.Location;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * This class is used to analyze the Document received from
- * OpenWeather (Open Weather APIs) using XPath queries.
+ * This class is used to build the URL for OpenWeather API's request
  * 
  * @author Pietro Venturini
  */

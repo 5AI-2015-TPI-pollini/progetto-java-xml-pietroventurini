@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <!-- Preferences Definition -->
 
-<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readingurl.PreferencesController">
+<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Geocode.PreferencesController">
    <children>
       <CheckBox fx:id="proxyCheckbox" layoutX="58.0" layoutY="110.0" mnemonicParsing="false" onAction="#proxyCheckboxEvent" prefHeight="31.0" prefWidth="95.0" text="Proxy" textFill="#616161">
          <font>

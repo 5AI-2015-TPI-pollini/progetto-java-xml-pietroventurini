@@ -1,4 +1,4 @@
-package readingurl;
+package Geocode;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import readingURL.XMLRetriver;
 
 /**
  * This is the controller of the Preferences,

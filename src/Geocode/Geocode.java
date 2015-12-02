@@ -1,19 +1,11 @@
-package readingurl;
+package Geocode;
 
-import GMaps.Location;
-import GMaps.GMapsXPathHandler;
-import Weather.WeatherXPathHandler;
-import java.io.BufferedReader;
-import java.io.IOException; 
-import java.io.InputStreamReader;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 
 public class Geocode extends Application {

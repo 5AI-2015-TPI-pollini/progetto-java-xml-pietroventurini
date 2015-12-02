@@ -1,4 +1,4 @@
-package readingurl;
+package readingURL;
 
 import java.net.Proxy;
 import java.net.URL;

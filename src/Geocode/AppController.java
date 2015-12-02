@@ -1,4 +1,4 @@
-package readingurl;
+package Geocode;
 
 import GMaps.GMapsXPathHandler;
 import GMaps.Location;
@@ -20,6 +20,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import readingURL.GMapsURLHandler;
+import readingURL.WeatherURLHandler;
+import readingURL.XMLRetriver;
 
 /**
  * This is the controller of the GUI,

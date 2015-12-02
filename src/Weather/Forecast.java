@@ -1,5 +1,12 @@
 package Weather;
 
+/**
+ * This is the Forecast Class,
+ * It indicates: name of the location, current temperature, min/MAX, description
+ * 
+ * @author Pietro Venturini
+ */
+
 public class Forecast {
     
     private final String name;
@@ -18,6 +25,7 @@ public class Forecast {
         return name;
     }
 
+    // '%.1f" shows just 1 decimal
     public String getTemperature() {
         return String.format("%.1f", temperature) + "°C";
     }

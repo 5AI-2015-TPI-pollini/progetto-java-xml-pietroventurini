@@ -7,6 +7,13 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 
+/**
+ * This class is used to analyze the Document received from
+ * Open Weather APIs using XPath queries.
+ * 
+ * @author Pietro Venturini
+ */
+
 public class WeatherXPathHandler {
 private final Document xml;
     private static final XPathFactory xpathFactory = XPathFactory.newInstance();

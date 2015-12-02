@@ -34,7 +34,8 @@ public class Location {
     public void setName(String name) {
         this.address = name;
     }
-
+    
+    //Coordinates(x = latitude, y = longitude)
     public Point.Double getCoordinates() {
         return new Point.Double(lat, lng);
     }

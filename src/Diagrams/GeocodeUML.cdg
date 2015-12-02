@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="GeocodingProject">
+  <ClassDiagramComponents>
+    <Class name="AppController" package="Geocode" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="myTable" type="TableView" visibility="private"/>
+        <Field name="myButton" type="Button" visibility="private"/>
+        <Field name="myText" type="TextField" visibility="private"/>
+        <Field name="locationColumn" type="TableColumn" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="location"/>
+          <Argument type="ResourceBundle" name="resources"/>
+        </Method>
+        <Method name="buttonEvent" returnType="void" visibility="public"/>
+        <Method name="preferencesMenuEvent" returnType="void" visibility="public"/>
+        <Method name="closeEvent" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Geocode" package="Geocode" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PreferencesController" package="Geocode" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="proxyCheckbox" type="CheckBox" visibility="private"/>
+        <Field name="addressField" type="TextField" visibility="private"/>
+        <Field name="cancelButton" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="location"/>
+          <Argument type="ResourceBundle" name="resources"/>
+        </Method>
+        <Method name="cancelButtonEvent" returnType="void" visibility="public"/>
+        <Method name="applyButtonEvent" returnType="void" visibility="public"/>
+        <Method name="proxyCheckboxEvent" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GMapsXPathHandler" package="GMaps" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="xml" type="Document" visibility="private"/>
+        <Field name="xpathFactory" type="XPathFactory" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="locations" type="Location[]" visibility="private"/>
+        <Field name="FORMATTED_ADDRESS" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="LATITUDE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="LONGITUDE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Document" name="retrivedResult"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="extractFromDoc" returnType="Location[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Location" package="GMaps" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="lat" type="double" visibility="private"/>
+        <Field name="forecast" type="Forecast" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="latitude"/>
+          <Argument type="double" name="longitude"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getCoordinates" returnType="Point.Double" visibility="public"/>
+        <Method name="getLatitude" returnType="String" visibility="public"/>
+        <Method name="getLongitude" returnType="String" visibility="public"/>
+        <Method name="setCoordinates" returnType="void" visibility="public">
+          <Argument type="Point.Double" name="coordinates"/>
+        </Method>
+        <Method name="setForecast" returnType="void" visibility="public">
+          <Argument type="Forecast" name="forecast"/>
+        </Method>
+        <Method name="getForecast" returnType="Forecast" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GMapsURLHandler" package="readingURL" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="URL_PREFIX" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="DOCUMENT_TYPE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="ADDRESS_PREFIX" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="location" type="Location" visibility="private"/>
+        <Field name="URL" type="URL" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="generateURL" returnType="URL" visibility="public" isStatic="true">
+          <Argument type="String" name="location"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="WeatherURLHandler" package="readingURL" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="URL_PREFIX" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="LATITUDE_PREFIX" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="LONGITUDE_PREFIX" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="METRIC_UNITS" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="APP_ID" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="XML_MODE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="location" type="Location" visibility="private"/>
+        <Field name="URL" type="URL" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="generateURL" returnType="URL" visibility="public" isStatic="true">
+          <Argument type="Location" name="location"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="XMLRetriver" package="readingURL" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="docBuilderFactory" type="DocumentBuilderFactory" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="url" type="URL" visibility="private" isFinal="true"/>
+        <Field name="doc" type="Document" visibility="private"/>
+        <Field name="urlConnection" type="URLConnection" visibility="private"/>
+        <Field name="proxy" type="Proxy" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="URL" name="url"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setProxy" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Proxy" name="newProxy"/>
+        </Method>
+        <Method name="retriveResult" returnType="Document" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Forecast" package="Weather" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private" isFinal="true"/>
+        <Field name="temperature" type="double" visibility="private"/>
+        <Field name="clouds" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="temperature"/>
+          <Argument type="double" name="min"/>
+          <Argument type="double" name="max"/>
+          <Argument type="String" name="clouds"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getTemperature" returnType="String" visibility="public"/>
+        <Method name="getMin" returnType="String" visibility="public"/>
+        <Method name="getMax" returnType="String" visibility="public"/>
+        <Method name="getClouds" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="WeatherXPathHandler" package="Weather" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="xml" type="Document" visibility="private" isFinal="true"/>
+        <Field name="xpathFactory" type="XPathFactory" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="forecast" type="Forecast" visibility="private"/>
+        <Field name="CITY_NAME" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="CURRENT_TEMPERATURE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="MIN_TEMPERATURE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="MAX_TEMPERATURE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="CLOUDS" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Document" name="retrivedResult"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="extractFromDoc" returnType="Forecast" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="GMaps.Location" target="Weather.Forecast" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="GMaps.GMapsXPathHandler" target="GMaps.Location" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="location" source="readingURL.GMapsURLHandler" target="GMaps.Location" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="location" source="readingURL.WeatherURLHandler" target="GMaps.Location" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="readingURL.WeatherURLHandler" target="GMaps.Location" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="forecast" source="Weather.WeatherXPathHandler" target="Weather.Forecast" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Weather.WeatherXPathHandler" target="Weather.Forecast" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="forecast" source="GMaps.Location" target="Weather.Forecast" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
